@@ -4,12 +4,18 @@ using namespace std;
 
 int main()
 {
-    // Getting the user choice
     short choice;
     cout << "Get help on:\n"
          << "1. If\n"
          << "2. Else\n"
+         << "3. For\n"
+         << "4. While\n"
+         << "5. Do-while\n"
          << "Choose One: \n";
+    do
+    {
+        // Getting the user choice
+    
     cin >> choice;
     switch (choice)
     {
@@ -24,7 +30,31 @@ int main()
              << "\tbreak;\n"
              << "\t}";
         break;
+    case 3:
+        cout << "Using for(initialization; conditional ; iteration){\n"
+             << "\t...\n"
+             << "\t...\n"
+             << "\t...\n"
+             << "\t}";
+    break;
+    case 4:
+        cout << "Using while(conditional){\n"
+             << "\t...\n"
+             << "\t...\n"
+             << "\titeration;\n"
+             << "\t}";
+    break;
+    case 5:
+        cout << "Using do{\n"
+             << "\t...\n"
+             << "\t...\n"
+             << "\titeration;\n"
+             << "\t}while(conditional)\n";
+    break;
     default:
-        cout << "Selection not found";
+        cout << "Selection not found. Please choose a number between 1-5.\n";
     }
+    } while (choice < 1 || choice > 5);
+    
+    
 }
